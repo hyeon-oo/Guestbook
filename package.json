@@ -2,10 +2,12 @@
   "name": "guestbook",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://hyeon-oo.github.io/Guestbook", 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
