@@ -73,7 +73,7 @@ function GuestBookPage() {
     >
       {/* Navbar */}
       <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
-
+        
         <h1 className="text-2xl font-extrabold text-indigo-600 font-ClimateCrisis">
           GUESTBOOK
         </h1>
@@ -118,22 +118,24 @@ function GuestBookPage() {
             {/* value 입력칸 및 시/군 선택 버튼 */}
             {formType === "region" ? (
               <>
-                <div className="flex mb-4">
+                <div className="flex flex-nowrap mb-4">
                   <input
                     type="text"
                     placeholder={LABELS[formType]}
-                    className="flex-grow px-3 py-2 border border-gray-300 rounded-l-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                    className="flex-grow min-w-0 px-3 py-2 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
                     value={value.replace(/(시|군)$/, "")}
                     onChange={(e) => setValue(e.target.value)}
                   />
                   <button
                     type="button"
-                    className="px-4 bg-indigo-600 text-white rounded-r-lg hover:bg-indigo-500 transition"
+                    className="px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition flex-shrink-0"
                     onClick={() => setShowRegionSelector((v) => !v)}
                   >
                     선택
                   </button>
                 </div>
+
+
                 {showRegionSelector && (
                   <div className="mb-4 space-x-4">
                     <button
